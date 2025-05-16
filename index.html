@@ -1,10 +1,64 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Haruta Yuki</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haruta Yuki - 研究者プロフィール</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>test</h1>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+  <div class="max-w-3xl mx-auto p-6">
+    <div class="flex justify-end mb-4">
+      <button onclick="switchLanguage('ja')" class="text-sm px-2 py-1 border rounded-l bg-white hover:bg-gray-100">日本語</button>
+      <button onclick="switchLanguage('en')" class="text-sm px-2 py-1 border rounded-r bg-white hover:bg-gray-100">English</button>
+    </div>
+
+    <div class="bg-white shadow-xl rounded-2xl p-6">
+      <!-- 名前 -->
+      <h1 class="text-3xl font-bold text-blue-700 mb-2 lang-ja">春田 勇輝（Haruta Yuki）</h1>
+      <h1 class="text-3xl font-bold text-blue-700 mb-2 lang-en hidden">Yuki Haruta</h1>
+
+      <!-- 所属 -->
+      <p class="text-lg text-gray-600 mb-4 lang-ja">東京外国語大学大学院総合国際学研究科/アジアアフリカ言語文化研究所</p>
+      <p class="text-lg text-gray-600 mb-4 lang-en hidden">TUFS/ILCAA</p>
+
+      <!-- 研究分野 -->
+      <div class="mb-6">
+        <h2 class="text-xl font-semibold border-b pb-1 mb-2 lang-ja">研究分野</h2>
+        <h2 class="text-xl font-semibold border-b pb-1 mb-2 lang-en hidden">Research Areas</h2>
+        <p class="lang-ja">モンゴル諸語, 記述言語学, 歴史言語学, 音韻論</p>
+        <p class="lang-en hidden">Mongolic Languages, Descriptive Linguistics, Historical Linguistics, Phonology </p>
+      </div>
+
+      <!-- 論文 -->
+      <div class="mb-6">
+        <h2 class="text-xl font-semibold border-b pb-1 mb-2 lang-ja">論文</h2>
+        <h2 class="text-xl font-semibold border-b pb-1 mb-2 lang-en hidden">Selected Publications</h2>
+        <ul class="list-disc list-inside space-y-1 lang-ja">
+          <li>2024年康家語基礎語彙(1)</li>
+          <li>康家語（カンジャ語）の母音体系とその通時的変化</li>
+        </ul>
+        <ul class="list-disc list-inside space-y-1 lang-en hidden">
+          <li>A Basic Vocabulary of Kangjia (1), 2024</li>
+          <li>The Vowel System and its historical development of Kangjia , 2023</li>
+        </ul>
+      </div>
+
+      <!-- 連絡先 -->
+      <div>
+        <h2 class="text-xl font-semibold border-b pb-1 mb-2 lang-ja">連絡先</h2>
+        <h2 class="text-xl font-semibold border-b pb-1 mb-2 lang-en hidden">Contact</h2>
+        <p class="lang-ja">メール: <a href="mailto:haruta@example.ac.jp" class="text-blue-600 hover:underline">haruta.yuki97@gmail.com</a></p>
+        <p class="lang-en hidden">Email: <a href="mailto:haruta@example.ac.jp" class="text-blue-600 hover:underline">haruta.yuki97@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll('.lang-ja').forEach(el => el.classList.toggle('hidden', lang !== 'ja'));
+      document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', lang !== 'en'));
+    }
+  </script>
 </body>
 </html>
